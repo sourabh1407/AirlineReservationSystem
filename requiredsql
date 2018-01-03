@@ -1,0 +1,371 @@
+CREATE TABLE USERS (username varchar2(20),password varchar2(20),role varchar2(20),mobile_no varchar2(20));
+
+CREATE TABLE BOOKINGINFORMATION(
+booking_id varchar2(5)  primary key,
+cust_email varchar2(50),
+no_of_passengers number(1),
+class_type varchar2(50),
+total_fare number(8,2),
+seat_number varchar2(255),
+credit_card_info varchar2(20),
+src_city varchar2(50),
+dest_city varchar2(50),
+flightno varchar2(5)) ;
+
+create table airport(airport_name varchar2(20), abbreviation varchar2(20),location varchar2(20));
+
+create table flightinformation (flightno varchar2(5) primary key, airline varchar2(50),
+dep_city varchar2(50),arr_city varchar2(50),dep_date date,arr_date date ,dep_time varchar2(10),
+arr_time varchar2(10),firstSeats number,firstseatfare number(7,2),BussSeats number,BussSeatsFare
+number(7,2));
+
+===============================================================================
+
+create sequence bookingId_sequence;
+
+===============================================================================
+Sai
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55501','GoAir','Bengaluru','New Delhi','01/24/2018',
+'01/24/2018','11:40','14:35',78,6555,67,8555); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55502','GoAir','Bengaluru','Mumbai','01/24/2018',
+'01/24/2018','08:50','10:30',78,5555,50,7050); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55503','GoAir','Bengaluru','Kolkata','01/25/2018',
+'01/26/2018','23:40','01:50',62,6555,48,8555); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55504','GoAir','Bengaluru','Pune','01/25/2018',
+'01/25/2018','18:40','20:15',68,2000,58,3125); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55505','GoAir','Pune','Bengaluru','01/27/2018',
+'01/27/2018','04:40','06:35',78,2500,67,4150); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55506','GoAir','Bengaluru','Chennai','01/28/2018',
+'01/28/2018','02:40','03:15',78,1500,67,3555); 
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55507','GoAir','Mumbai','Chennai','01/29/2018',
+'01/29/2018','02:40','03:15',78,6500,67,7085); 
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55508','GoAir','Bengaluru','Pune','01/30/2018',
+'01/30/2018','02:40','04:15',78,3500,67,5555); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55509','GoAir','Hyderabad','Mumbai','01/27/2018',
+'01/27/2018','04:40','07:15',78,4500,67,7555); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('55510','GoAir','Hyderabad','Chennai','01/26/2018',
+'01/26/2018','20:40','23:15',78,4500,67,6555); 
+
+
+===============================================================================
+
+Srilekha :
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33301','SpiceJet','Bengaluru','New Delhi','01/13/2018',
+'01/13/2018','11:40','14:35',78,6555,67,8555); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33302','SpiceJet','Bengaluru','Mumbai','01/16/2018',
+'01/16/2018','08:50','10:30',78,5555,50,7050); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33303','SpiceJet','Bengaluru','Pune','01/15/2018',
+'01/16/2018','23:40','01:50',62,6555,48,8555); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33304','SpiceJet','Bengaluru','Chennai','01/18/2018',
+'01/18/2018','18:40','20:15',68,3000,58,4125); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33305','SpiceJet','Pune','Chennai','01/14/2018',
+'01/14/2018','04:40','06:35',78,4500,67,6150); 
+
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33306','SpiceJet','Mumbai','Chennai','01/17/2018',
+'01/17/2018','02:40','03:15',78,2900,67,4555); 
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33307','SpiceJet','Hyderabad','Chennai','01/15/2018',
+'01/15/2018','03:40','05:15',78,6500,67,7085); 
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33308','SpiceJet','Chennai','Pune','01/12/2018',
+'01/12/2018','02:40','03:15',78,3500,67,5555); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33309','SpiceJet','Pune','Mumbai','01/16/2018',
+'01/16/2018','12:40','13:15',78,2500,67,4555); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
+ VALUES('33310','SpiceJet','Hyderabad','Mumbai','01/30/2018',
+'01/30/2018','20:55','23:15',78,3500,67,4800); 
+
+=====================================================================
+
+Deeksha
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11101','IndiGo','Mumbai','Chennai','01/01/2018',
+'01/01/2018','12:30','15:30',75,7100,65,8500); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11102','IndiGo','Pune','Bangalore','01/02/2018',
+'01/02/2018','09:30','12:30',75,6600,65,8100); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11103','IndiGo','Bangalore','Pune','01/03/2018',
+'01/03/2018','1:30','3:30',75,4800,65,7100); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11104','IndiGo','Mumbai','Kolkata','01/04/2018',
+'01/04/2018','17:30','19:30',75,6200,65,8900); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11105','IndiGo','Pune','Chennai','01/05/2018',
+'01/05/2018','06:30','08:30',75,6250,65,8300); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11106','IndiGo','Pune','Bangalore','01/06/2018',
+'01/06/2018','09:30','11:30',75,5378,65,7472); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11107','IndiGo','Mumbai','Chennai','01/02/2018',
+'01/02/2018','13:30','15:30',75,5980,65,8900); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11108','IndiGo','Chennai','Mumbai','01/01/2018',
+'01/01/2018','17:30','20:30',75,6040,65,7750); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11109','IndiGo','Bangalore','Chennai','01/032018',
+'01/03/2018','08:00','10:00',75,7850,65,9080); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('11110','IndiGo','Bangalore','Mumbai','01/04/2018',
+'01/04/2018','13:30','15:30',75,5500,65,8320); 
+
+========================================================================
+
+Manisha
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44401','Air India','Mumbai','Chennai','01/19/2018',
+'01/19/2018','09:30','12:30',78,7900,67,8900); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44402','Air India','Pune','Bangalore','01/18/2018',
+'01/18/2018','14:30','17:30',78,5600,67,8700); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44403','Air India','Bangalore','Pune','01/20/2018',
+'01/20/2018','17:30','19:30',78,5100,67,7900); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44404','Air India','Mumbai','Kolkata','01/21/2018',
+'01/21/2018','07:30','09:30',78,5647,67,9000); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44405','Air India','Pune','Chennai','01/22/2018',
+'01/22/2018','18:30','20:30',78,7865,67,8700); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44406','Air India','Pune','Bangalore','01/23/2018',
+'01/23/2018','21:30','23:30',78,4530,67,7600); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44407','Air India','Mumbai','Chennai','01/24/2018',
+'01/24/2018','08:30','10:30',78,6540,67,9700); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44408','Air India','Chennai','Mumbai','01/18/2018',
+'01/18/2018','07:30','10:30',78,5430,67,7600); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44409','Air India','Bangalore','Chennai','01/19/2018',
+'01/19/2018','10:30','12:30',78,6210,67,8700); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare) VALUES('44410','Air India','Bangalore','Mumbai','01/20/2018',
+'01/20/2018','07:30','09:30',78,6590,67,8100); 
+
+
+=========================================================================
+
+Manasa
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22201','JetAirways','Mumbai','Bengaluru','01/06/2018',
+'01/06/2018','09:00','10:30',70,5236,60,21500); 
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22202','JetAirways','Mumbai','Chennai','01/07/2018',
+'01/07/2018','09:15','11:15',65,4260,54,12356);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22203','JetAirways','Mumbai','Hyderabad','01/06/2018',
+'01/06/2018','10:00','11:20',25,5021,63,13201);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22204','JetAirways','Mumbai','Kolkata','01/07/2018',
+'01/07/2018','11:00','13:30',50,8465,20,25462);
+
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22205','JetAirways','Bengaluru','Mumbai','01/09/2018',
+'01/09/2018','09:00','10:40',68,3560,56,18500);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22206','JetAirways','Bengaluru','Pune','01/06/2018',
+'01/06/2018','14:00','15:30',56,4191,30,15915);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22207','JetAirways','Bengaluru','Hyderabad','01/12/2018',
+'01/12/2018','12:00','13:05',48,3115,45,10736);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22208','JetAirways','Pune','Bengaluru','01/08/2018',
+'01/08/2018','16:15','17:35',15,4977,23,13022);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22209','JetAirways','Pune','Chennai','01/10/2018',
+'01/10/2018','08:15','10:00',42,5595,63,23986);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22210','JetAirways','Pune','Hyderabad','01/11/2018',
+'01/11/2018','13:15','14:30',25,2500,36,14843);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22211','JetAirways','Pune','Kolkata','01/07/2018',
+'01/07/2018','17:30','20:00',44,8495,68,22827);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22212','JetAirways','Chennai','Mumbai','01/11/2018',
+'01/11/2018','19:30','21:25',65,3177,23,14989);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22213','JetAirways','Chennai','Pune','01/08/2018',
+'01/08/2018','21:45','23:30',14,3597,18,30590);
+
+INSERT INTO FLIGHTINFORMATION (flightno, airline,
+dep_city,arr_city,dep_date,arr_date,dep_time,
+arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)  VALUES('22214','JetAirways','Hyderabad','Bengaluru','01/09/2018',
+'01/09/2018','23:25','00:30',38,2382,14,11020);
+
+==============================================================
+
+
+
+
+
+
+
+
+
+
