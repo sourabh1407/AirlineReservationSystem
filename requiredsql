@@ -29,7 +29,7 @@ Sai
 INSERT INTO FLIGHTINFORMATION (flightno, airline,
 dep_city,arr_city,dep_date,arr_date,dep_time,
 arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
- VALUES('55501','GoAir','Bengaluru','New Delhi','01/24/2018',
+ VALUES('55501','GoAir','Bengaluru','Delhi','01/24/2018',
 '01/24/2018','11:40','14:35',78,6555,67,8555); 
 
 
@@ -105,7 +105,7 @@ Srilekha :
 INSERT INTO FLIGHTINFORMATION (flightno, airline,
 dep_city,arr_city,dep_date,arr_date,dep_time,
 arr_time,firstSeats,firstseatfare,BussSeats,BussSeatsFare)
- VALUES('33301','SpiceJet','Bengaluru','New Delhi','01/13/2018',
+ VALUES('33301','SpiceJet','Bengaluru','Delhi','01/13/2018',
 '01/13/2018','11:40','14:35',78,6555,67,8555); 
 
 
